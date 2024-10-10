@@ -4,7 +4,7 @@
 
 # Basic Commands
 
-django-admin startproject <project_name>
+### django-admin startproject <project_name>
 # Creates a new Django project with the specified project name.
 
 python manage.py runserver
