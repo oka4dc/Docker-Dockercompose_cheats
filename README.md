@@ -1,6 +1,6 @@
-# Docker-Dockercompose_cheats
+# Django-Docker-Dockercompose_cheats
 # compiled by: Dennis Okafor
-# okaforchikelue93@gmail.com
+## okaforchikelue93@gmail.com
 
 # Basic Commands
 
@@ -106,3 +106,140 @@ python manage.py runserver_plus
 
 python manage.py graph_models <app_name>
 # Generates a graphical representation of the model dependencies (requires `django-extensions`).
+
+# Docker Commands
+
+# Pull an image from a Docker registry (default: Docker Hub)
+docker pull <image_name> 
+
+# Run a container from an image
+docker run <image_name>
+
+# Run a container in the background (detached mode)
+docker run -d <image_name>
+
+# Run a container with an interactive shell
+docker run -it <image_name> /bin/bash
+
+# List all running containers
+docker ps
+
+# List all containers (including stopped ones)
+docker ps -a
+
+# Stop a running container
+docker stop <container_id>
+
+# Start a stopped container
+docker start <container_id>
+
+# Restart a running container
+docker restart <container_id>
+
+# Remove a stopped container
+docker rm <container_id>
+
+# Remove a Docker image
+docker rmi <image_name>
+
+# Build a Docker image from a Dockerfile
+docker build -t <image_name> .
+
+# View logs of a running container
+docker logs <container_id>
+
+# Follow logs of a container in real-time
+docker logs -f <container_id>
+
+# Execute a command in a running container
+docker exec -it <container_id> <command>
+
+# View system-wide Docker information
+docker info
+
+# List all Docker images
+docker images
+
+# Remove dangling images
+docker image prune
+
+# Remove all stopped containers and dangling images
+docker system prune
+
+# View disk usage by Docker
+docker system df
+
+# Push an image to Docker Hub (after logging in)
+docker push <username>/<image_name>
+
+# Login to Docker Hub
+docker login
+
+# Tag an image for pushing to a registry
+docker tag <local_image_name> <username>/<image_name>:<tag>
+
+# Save an image to a tar file
+docker save -o <output_file>.tar <image_name>
+
+# Load an image from a tar file
+docker load -i <image_file>.tar
+
+# Inspect the details of a container
+docker inspect <container_id>
+
+# Attach to a running container’s terminal
+docker attach <container_id>
+
+# Show resource usage of containers
+docker stats
+
+# Show changes made in a container’s filesystem
+docker diff <container_id>
+
+
+# Docker Compose Commands
+
+# Create and start containers based on the docker-compose.yml file
+docker-compose up
+
+# Start containers in the background (detached mode)
+docker-compose up -d
+
+# Stop and remove containers, networks, and volumes
+docker-compose down
+
+# Stop containers without removing them
+docker-compose stop
+
+# Restart containers
+docker-compose restart
+
+# View logs from all containers in real-time
+docker-compose logs
+
+# Follow logs of specific service in real-time
+docker-compose logs -f <service_name>
+
+# Build or rebuild services
+docker-compose build
+
+# List all running containers from docker-compose
+docker-compose ps
+
+# Execute a command in a running container from docker-compose
+docker-compose exec <service_name> <command>
+
+# View the configuration of docker-compose.yml
+docker-compose config
+
+# Scale the number of containers for a service
+docker-compose scale <service_name>=<count>
+
+# Stop and remove all containers, networks, and volumes created by `up`
+docker-compose down -v
+
+# Run a one-time command against a service
+docker-compose run <service_name> <command>
+
+# Remove stopped service containers
+docker-compose rm
